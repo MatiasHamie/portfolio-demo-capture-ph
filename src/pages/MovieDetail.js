@@ -13,7 +13,7 @@ const MovieDetail = () => {
   const url = history.location.pathname;
 
   // Movies se inicializan con el array de datos de peliculas en MovieState.js
-  const [movies, setMovies] = useState(MovieState);
+  const [movies] = useState(MovieState);
   const [movie, setMovie] = useState(null);
 
   /** lo ejecuto cada vez que se actualiza la url o las peliculas */
@@ -52,7 +52,7 @@ const MovieDetail = () => {
             ))}
           </StyledAwards>
           <StyledImageDisplay>
-            <img src={movie.secondaryImg} alt="secondary image" />
+            <img src={movie.secondaryImg} alt="secondary img" />
           </StyledImageDisplay>
         </StyledDetails>
       )}
@@ -90,7 +90,7 @@ const StyledAwards = styled.div`
   align-items: center;
   justify-content: space-around;
 
-  @media (max-width: 1500px){
+  @media (max-width: 1500px) {
     margin: 2rem 2rem;
     display: block;
   }
